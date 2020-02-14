@@ -1,0 +1,7 @@
+﻿  main.c
+c:\users\stas\source\repos\lowio\lowio\main.c(21): warning C4244: "funkcja": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+c:\users\stas\source\repos\lowio\lowio\main.c(29): warning C4047: "funkcja": "int" różni się w poziomach operatorów pośrednich od "char [8]"
+c:\users\stas\source\repos\lowio\lowio\main.c(29): warning C4024: "_write": różne typy dla formalnego i rzeczywistego parametru 1
+c:\users\stas\source\repos\lowio\lowio\main.c(31): warning C4047: "funkcja": "int" różni się w poziomach operatorów pośrednich od "char [8]"
+c:\users\stas\source\repos\lowio\lowio\main.c(31): warning C4024: "_close": różne typy dla formalnego i rzeczywistego parametru 1
+  LowIO.vcxproj -> C:\Users\Stas\source\repos\LowIO\Debug\LowIO.exe
