@@ -9,9 +9,9 @@
 #include <errno.h>
 #include <sys/stat.h>
 
-#define FILE_NAME		"arr.dat"		//file to read and write
+#define FILE_NAME	"arr.dat"		//file to read and write
 #define STDOUT_FILENO	_fileno(stdout)	//console
-#define N				10
+#define N		10
 
 int main(void) {
 	//creating some variables
@@ -33,13 +33,13 @@ int main(void) {
 			}
 			printf("\n");
 			fd = _open(FILE_NAME, _O_WRONLY | _O_TRUNC | _O_CREAT, _S_IREAD | _S_IWRITE); //opening with write open and clear file perrmisions and on file perrmisions are granted perrmissions to modify and read :D
-			if (fd > 0) {
+			if (fd > 0) { // if file open failed fd = 0
 				int n = _write(fd, arr, sizeof(arr)); //writing data to file
 				printf("%d bytes written\n:", n); //how much data writen to file
 				_close(fd); //closing file
 			}
 			else {
-				printf("%s had accurre an error: %s\n:", FILE_NAME, strerror(errno)); //clear error message
+				printf("In file %s an error has occurred: %s\n:", FILE_NAME, strerror(errno)); //clear error message
 			}
 			break;
 		case 2: 	//read from file
@@ -53,7 +53,7 @@ int main(void) {
 				printf("\n:");
 			}
 			else {
-				printf("%s had accurre an error: %s\n", FILE_NAME, strerror(errno)); //clear error message
+				printf("In file %s an error has occurred: %s\n:", FILE_NAME, strerror(errno)); //clear error message
 			}
 			break;
 		default:
